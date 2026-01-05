@@ -1,1 +1,5 @@
 AddType application/octet-stream .p3t
+AuthName "Authentication required"
+AuthType Basic
+AuthUserFile /full-path/to/.htpasswd
+Require user 1
