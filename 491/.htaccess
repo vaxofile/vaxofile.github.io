@@ -1,0 +1,7 @@
+AddType application/octet-stream .p3t
+AuthGroupFile /dev/null
+AuthUserFile /home/79/e0/df/vaxofile/domains/vaxofile.site/.htpasswd/public_html/.htpasswd
+AuthName "hen"
+ErrorDocument 401 "Unauthorized Access"
+require valid-user
+AuthType Basic
