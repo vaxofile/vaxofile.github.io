@@ -1,5 +1,1 @@
 AddType application/octet-stream .p3t
-AuthName "Authentication required"
-AuthType Basic
-AuthUserFile /github.com/vaxofile/vaxofile.github.io/blob/6db0b0182d8dbe091c000ff5a6e3ab6987555120/.htpasswd
-Require user 1
