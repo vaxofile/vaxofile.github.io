@@ -1,15 +1,7 @@
-<title>Auto HEN Installer HFW 4.92</title>
-<link rel="stylesheet" href="style.css">
+<title>AutoHEN Installer</title>
 <center>
-<h1><span style='color:#800ce0'>Instalador Automático de HEN para HFW 4.92</span></h1>
-<h1><span style='color:#800ce0'>---------------------------------------------------------------------------------------------------------------------</span></h1>
-<h1><span style='color:#800ce0'>HEN 3.4.0 Oficial</span></h1>
-<h1><span style='color:#800ce0'>----------------------------------------------------------------------------------------------------------------------</span></h1>
-<h1><span style='color:#800ce0'>Instalador modificado por VIDEOGAMES SCZ y Adaptado por Augusto Tips. Gracias al equipo de PSXPlace por brindar sus herramientas y conocimientos.</span></h1>
-<h1><span style='color:#800ce0'>----------------------------------------------------------------------------------------------------------------------</span></h1>
-
-<img src="img/image.jpg" width="150" height="150">
-
+<h1>AutoHEN Installer 4.92</h1>
+<hr>
 <div id="result"></div>
 <div id="exploit"></div>
 <div id="trigger" style="display: none;"></div>
@@ -390,7 +382,7 @@ function listener()
 	var myListener = function ()
 	{
 		document.removeEventListener('mousemove', myListener, false);
-		showMsg('<h2>Instalando HEN, por favor espere al reinicio...</h2>');
+		showMsg('<h2>Installing HEN, please wait...</h2>');
 		triggerX();
 	};
 	document.addEventListener('mousemove', myListener, false);
@@ -398,13 +390,13 @@ function listener()
 function triggerX()
 {
 	setTimeout(trigger,50,jump_1_addr);
-	setTimeout(showMsg,2000,"<h2><span style='color:red'>Fallo al cargar el archivo HEN.P3T. Cierra el navegador y vuelve a intentarlo.</span></h2>");
+	setTimeout(showMsg,2000,"<h2><span style='color:red'>Failed to load setup file. Close the browser and try again.</span></h2>");
 	t_out=0;
 	total_loops=0;
 }
 function HFWmsg()
 {
-	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.92 en tu consola antes de usar esto!</h2></span>");
+	showMsg("<h2><span style='color:red'>You must install Hybrid Firmware (HFW) 4.92 before installing HEN!</h2></span>");
 	throw new Error('');
 }
 if(fwv=="4.92"){initROP(true)}else{HFWmsg()}
